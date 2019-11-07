@@ -1,0 +1,171 @@
+
+$mobile_size : 370px;
+$tablet_size : 669px;
+$laptop_size : 1020px;
+
+$ice-color : #00465b;
+$ace-blue-color : #dde5eb;
+
+
+header
+{
+  width: 100%;
+  min-height: 500px;
+  background-image: url("../img/background.jpg");
+  background-position: center;
+  background-size: cover;
+}
+p{
+  margin: 0;
+}
+header img
+{
+  width: 100%;
+  height: auto;
+
+}
+.reduction
+{
+  position: absolute;
+  width: 200px;
+  background-color: darkred;
+  color: white;
+  transform: rotate(45deg);
+  top: 70px;
+  right: 30px;
+  text-align: center;
+}
+
+.bandeau
+{
+  position: absolute;
+  top: 450px;
+
+  background-color: darkgray;
+  color: white;
+  opacity: 0.5;
+  width: 100%;
+  padding-left: 10px ;
+
+}
+
+.header_bandeau-inline
+{
+  font-size: 10px;
+}
+.inner
+{
+  padding: 0 2%;
+  color: $ice-color;
+  background-color: $ace-blue-color;
+}
+
+.rendez-vous
+{
+  margin-left: auto;
+  margin-right: 5px;
+  margin-top: 5px;
+  background-color: white;
+  border-radius: 5px;
+  display: flex;
+  float: right;
+}
+.rendez-vous a
+{
+  color: $ice-color;
+}
+
+.main_content
+{
+  text-align: center;
+}
+.main_title
+{
+  text-align: center;
+}
+.ice-experience
+{
+  width: 100%;
+}
+
+
+.container_flex-cat {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+  padding: 5%;
+  margin-bottom: 50%;
+
+}
+
+.container_flex-cat > div {
+  padding: 10px;
+  text-align: center;
+  font-size: 20px;
+  width: 100%;
+
+}
+.container_flex-cat > div img {
+border-radius: 50%;
+
+}
+
+.container_flex-cat_ace
+{
+  display: none;
+}
+
+
+
+@media screen and (min-width: $tablet_size) {
+  .container_flex-cat_gym
+  {
+    order: -2;
+  }
+
+  .container_flex-cat > div {
+    width: 50%;
+
+  }
+}
+
+#logo_texte
+{
+  width: 800%;
+  height: auto;
+}
+
+.container_flex-cat_ace
+{
+  display: block;
+  width: 100%;
+  height: 40px;
+  border-radius: 55%;
+  background: radial-gradient(#708dad, #dde5eb);
+}
+
+@media screen and (min-width: $laptop_size) {
+  .inner
+  {
+    padding: 0 20%;
+  }
+  .bandeau p
+  {
+    display: inline;
+  }
+  .ice-experience
+  {
+    text-align: right;
+  }
+  .container_flex-cat > div {
+    width: auto;
+
+  }
+  .container_flex-cat_ace
+  {
+    display: none;
+  }
+
+
+}
