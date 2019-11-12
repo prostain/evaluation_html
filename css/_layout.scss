@@ -5,6 +5,8 @@ $laptop_size : 1020px;
 
 $ice-color : #00465b;
 $ace-blue-color : #dde5eb;
+$ace-blue-fonce : darken(#dde5eb, 20%);
+$gris : rgb(128,128,128);
 
 html, html
 {
@@ -13,6 +15,8 @@ html, html
     font-family: "Bernina Sans";
     src: url("../fonts/BerninaSans-Web-CondensedBold.woff2") format("woff2");
   }
+
+  font-family: 'Bernina Sans', 'RobotoDraft', 'Helvetica Neue', Helvetica, Arial;;
 }
 
 header
@@ -22,6 +26,7 @@ header
   background-image: url("../img/background.jpg");
   background-position: center;
   background-size: cover;
+  position: relative;
 }
 p{
   margin: 0;
@@ -59,12 +64,12 @@ header img
 .bandeau
 {
   position: absolute;
-  top: 450px;
-  background-color: darkgray;
+  bottom: 30px;
+  background-color: $gris;
   color: white;
   opacity: 0.5;
   width: 100%;
-  padding-left: 10px ;
+  padding: 10px;
 
 }
 
@@ -99,17 +104,20 @@ header img
 {
   text-align: center;
 }
+
 .main_title
 {
   text-align: center;
 }
+
 .ice-experience
 {
   width: 100%;
   letter-spacing: 5px;
-  margin-top: 20px;
-}
+  margin: 20px 0;
+  text-align: right;
 
+}
 
 .container_flex-cat {
   display: flex;
@@ -143,11 +151,10 @@ header img
 
 
 @media screen and (min-width: $tablet_size) {
-  header
-  {
-    height: 100%;
-    margin: auto;
-  }
+header
+{
+  min-height: 800px;
+}
   .container_flex-cat_gym
   {
     order: -2;
@@ -158,25 +165,24 @@ header img
 
   }
 
-  #logo_texte
-  {
-    width: 800%;
-    height: auto;
-  }
-
   .container_flex-cat_ace
   {
     display: block;
     width: 100%;
     height: 40px;
     border-radius: 55%;
-    background: radial-gradient(#708dad, #dde5eb);
+    background: radial-gradient($ace-blue-fonce,#dde5eb);
   }
 }
 
 
 
 @media screen and (min-width: $laptop_size) {
+  header
+  {
+    background-position: initial;
+
+  }
   .inner
   {
     padding: 0 20%;
@@ -185,11 +191,7 @@ header img
   {
     display: inline;
   }
-  .ice-experience
-  {
-    text-align: right;
-    margin-bottom: 20px;
-  }
+
   .container_flex-cat > div {
     width: 33%;
     margin: auto;

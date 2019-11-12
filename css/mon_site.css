@@ -73,6 +73,10 @@ nav ul li a:hover {
   }
 }
 
+html, html {
+  font-family: 'Bernina Sans', 'RobotoDraft', 'Helvetica Neue', Helvetica, Arial;
+}
+
 @font-face {
   html, html {
     font-family: "Bernina Sans";
@@ -86,6 +90,7 @@ header {
   background-image: url("../img/background.jpg");
   background-position: center;
   background-size: cover;
+  position: relative;
 }
 
 p {
@@ -121,12 +126,12 @@ header img {
 
 .bandeau {
   position: absolute;
-  top: 450px;
-  background-color: darkgray;
+  bottom: 30px;
+  background-color: gray;
   color: white;
   opacity: 0.5;
   width: 100%;
-  padding-left: 10px;
+  padding: 10px;
 }
 
 .header_bandeau-inline {
@@ -164,7 +169,8 @@ header img {
 .ice-experience {
   width: 100%;
   letter-spacing: 5px;
-  margin-top: 20px;
+  margin: 20px 0;
+  text-align: right;
 }
 
 .container_flex-cat {
@@ -197,8 +203,7 @@ header img {
 
 @media screen and (min-width: 669px) {
   header {
-    height: 100%;
-    margin: auto;
+    min-height: 800px;
   }
   .container_flex-cat_gym {
     -webkit-box-ordinal-group: -1;
@@ -207,29 +212,24 @@ header img {
   .container_flex-cat > div {
     width: 50%;
   }
-  #logo_texte {
-    width: 800%;
-    height: auto;
-  }
   .container_flex-cat_ace {
     display: block;
     width: 100%;
     height: 40px;
     border-radius: 55%;
-    background: radial-gradient(#708dad, #dde5eb);
+    background: radial-gradient(#9db4c5, #dde5eb);
   }
 }
 
 @media screen and (min-width: 1020px) {
+  header {
+    background-position: initial;
+  }
   .inner {
     padding: 0 20%;
   }
   .bandeau p {
     display: inline;
-  }
-  .ice-experience {
-    text-align: right;
-    margin-bottom: 20px;
   }
   .container_flex-cat > div {
     width: 33%;
