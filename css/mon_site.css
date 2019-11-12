@@ -73,6 +73,13 @@ nav ul li a:hover {
   }
 }
 
+@font-face {
+  html, html {
+    font-family: "Bernina Sans";
+    src: url("../fonts/BerninaSans-Web-CondensedBold.woff2") format("woff2");
+  }
+}
+
 header {
   width: 100%;
   min-height: 500px;
@@ -92,14 +99,24 @@ header img {
 
 .reduction {
   position: absolute;
-  width: 200px;
+  width: 230px;
   background-color: darkred;
   color: white;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  -webkit-transform: rotate(40deg);
+          transform: rotate(40deg);
   top: 70px;
   right: 30px;
   text-align: center;
+  border-radius: 5px;
+  display: inline;
+}
+
+.reduction > p, .reduction h3 {
+  display: inline;
+}
+
+.header_reduction-inline {
+  font-size: 15px;
 }
 
 .bandeau {
@@ -123,14 +140,13 @@ header img {
 }
 
 .rendez-vous {
-  margin-left: auto;
-  margin-right: 5px;
-  margin-top: 5px;
+  margin: 5px 5px 0 auto;
   background-color: white;
   border-radius: 5px;
   display: -webkit-box;
   display: flex;
   float: right;
+  border: 1px solid grey;
 }
 
 .rendez-vous a {
@@ -147,6 +163,8 @@ header img {
 
 .ice-experience {
   width: 100%;
+  letter-spacing: 5px;
+  margin-top: 20px;
 }
 
 .container_flex-cat {
@@ -157,7 +175,6 @@ header img {
   -webkit-box-pack: center;
           justify-content: center;
   padding: 5%;
-  margin-bottom: 50%;
 }
 
 .container_flex-cat > div {
@@ -168,7 +185,10 @@ header img {
 }
 
 .container_flex-cat > div img {
+  width: 100%;
+  height: auto;
   border-radius: 50%;
+  margin-bottom: 20px;
 }
 
 .container_flex-cat_ace {
@@ -176,6 +196,10 @@ header img {
 }
 
 @media screen and (min-width: 669px) {
+  header {
+    height: 100%;
+    margin: auto;
+  }
   .container_flex-cat_gym {
     -webkit-box-ordinal-group: -1;
             order: -2;
@@ -183,19 +207,17 @@ header img {
   .container_flex-cat > div {
     width: 50%;
   }
-}
-
-#logo_texte {
-  width: 800%;
-  height: auto;
-}
-
-.container_flex-cat_ace {
-  display: block;
-  width: 100%;
-  height: 40px;
-  border-radius: 55%;
-  background: radial-gradient(#708dad, #dde5eb);
+  #logo_texte {
+    width: 800%;
+    height: auto;
+  }
+  .container_flex-cat_ace {
+    display: block;
+    width: 100%;
+    height: 40px;
+    border-radius: 55%;
+    background: radial-gradient(#708dad, #dde5eb);
+  }
 }
 
 @media screen and (min-width: 1020px) {
@@ -207,9 +229,11 @@ header img {
   }
   .ice-experience {
     text-align: right;
+    margin-bottom: 20px;
   }
   .container_flex-cat > div {
-    width: auto;
+    width: 33%;
+    margin: auto;
   }
   .container_flex-cat_ace {
     display: none;
